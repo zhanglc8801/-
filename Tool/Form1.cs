@@ -187,6 +187,16 @@ namespace Tool
             });
         }
 
+        private void 在浏览器中打开OToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start(dataGridView1.SelectedRows[0].Cells[2].Value.ToString());
+        }
+
+        private void dataGridView1_DoubleClick(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start(dataGridView1.SelectedRows[0].Cells[2].Value.ToString());
+        }
+
         #region 异步线程
         //异步线程
         public static void RunAsync(Action action)
@@ -240,7 +250,8 @@ namespace Tool
             doc.Save(newFilePath, Aspose.Words.SaveFormat.Doc);
         }
 
-        #endregion
 
+        #endregion
+   
     }
 }

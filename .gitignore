@@ -4,3 +4,7 @@
 
 /.vs/顶点中文/v15/Server/sqlite3
 *.doc
+/Tool/bin/Debug/*.config
+/Tool/bin/Debug/*.pdb
+/Tool/bin/Debug/*.exe
+/Tool/obj

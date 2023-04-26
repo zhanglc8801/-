@@ -35,6 +35,9 @@
             this.txtUrl = new System.Windows.Forms.TextBox();
             this.btnJiexi = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.XH = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Title = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Link = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.下载选中章节DToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.下载选中章节分别保存EToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -43,9 +46,6 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.XH = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Title = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Link = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -106,6 +106,36 @@
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(679, 377);
             this.dataGridView1.TabIndex = 3;
+            this.dataGridView1.DoubleClick += new System.EventHandler(this.dataGridView1_DoubleClick);
+            // 
+            // XH
+            // 
+            this.XH.DataPropertyName = "index";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.XH.DefaultCellStyle = dataGridViewCellStyle2;
+            this.XH.HeaderText = "序号";
+            this.XH.Name = "XH";
+            this.XH.ReadOnly = true;
+            this.XH.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.XH.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.XH.Width = 50;
+            // 
+            // Title
+            // 
+            this.Title.DataPropertyName = "Title";
+            this.Title.HeaderText = "章节标题";
+            this.Title.Name = "Title";
+            this.Title.ReadOnly = true;
+            this.Title.Width = 280;
+            // 
+            // Link
+            // 
+            this.Link.DataPropertyName = "Link";
+            this.Link.HeaderText = "下载链接";
+            this.Link.Name = "Link";
+            this.Link.ReadOnly = true;
+            this.Link.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Link.Width = 325;
             // 
             // contextMenuStrip1
             // 
@@ -136,6 +166,7 @@
             this.在浏览器中打开OToolStripMenuItem.Name = "在浏览器中打开OToolStripMenuItem";
             this.在浏览器中打开OToolStripMenuItem.Size = new System.Drawing.Size(261, 22);
             this.在浏览器中打开OToolStripMenuItem.Text = "在浏览器中打开(&O)";
+            this.在浏览器中打开OToolStripMenuItem.Click += new System.EventHandler(this.在浏览器中打开OToolStripMenuItem_Click);
             // 
             // 下载选中章节到TXTTToolStripMenuItem
             // 
@@ -165,35 +196,6 @@
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
             this.toolStripStatusLabel1.Size = new System.Drawing.Size(131, 17);
             this.toolStripStatusLabel1.Text = "toolStripStatusLabel1";
-            // 
-            // XH
-            // 
-            this.XH.DataPropertyName = "index";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.XH.DefaultCellStyle = dataGridViewCellStyle2;
-            this.XH.HeaderText = "序号";
-            this.XH.Name = "XH";
-            this.XH.ReadOnly = true;
-            this.XH.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.XH.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.XH.Width = 50;
-            // 
-            // Title
-            // 
-            this.Title.DataPropertyName = "Title";
-            this.Title.HeaderText = "章节标题";
-            this.Title.Name = "Title";
-            this.Title.ReadOnly = true;
-            this.Title.Width = 280;
-            // 
-            // Link
-            // 
-            this.Link.DataPropertyName = "Link";
-            this.Link.HeaderText = "下载链接";
-            this.Link.Name = "Link";
-            this.Link.ReadOnly = true;
-            this.Link.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Link.Width = 325;
             // 
             // Form1
             // 
